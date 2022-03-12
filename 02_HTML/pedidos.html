@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ee">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guayaba pasteleria</title>
+    <style>
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header {
+            background-color: darkcyan;
+            margin-top: 1px;
+            padding-top: 1px;
+            text-align: center;
+            color: aliceblue;
+            height: 150px;
+        }
+        /*  clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Crear 2 columnas con la misma posición de la fila*/
+        nav {
+            float: left;
+            width: 10%;
+            height: 600px;
+            padding-top: 80px;
+            padding-left: 40px;
+            color:black;
+        }
+        article {
+            float: left;
+            padding-left: 20px; 
+            width: 70%;
+            height: 600px;
+            background-color: aliceblue;
+        }
+       
+        /*Responsiv layout*/
+        @media (max-width: 600px){
+            nav, 
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .imgPastel {
+            border-radius: 50px;
+        }
+        .container_row {
+            display: flex;
+            margin-left: 40px;
+        }
+        .columna_25 {
+            width: 25%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .column_33 {
+            width: 33%;
+        }
+      nav ul li{
+          margin-top: 30px;
+      }
+
+      header h1 {
+          font-size: 48px;
+      }
+      .column_33 p {
+        margin-bottom: 0px;
+        margin-top: 2px;
+        padding: 0px;   
+        font-size: 12px;
+       }
+       .column_33{
+        margin-right: 10px;
+       }
+
+       .column_33 h4 {
+           margin-left: 5px;
+           margin-top: 5px;
+       }
+
+       .container-80 {
+           display: flex;
+           margin-left: 220px;
+           font-size: 28px;
+       }
+       .container_40 {
+           margin-left: 25px;
+           padding-left: 40px;
+       }
+
+       div h3 ul li {
+
+       }
+      footer {
+          background-color: #304f52;
+          color: antiquewhite;
+          padding: 10px;
+          padding-top: 10px;
+          padding-bottom: 20px;
+      }
+
+      ul li a {
+          text-decoration: none;
+          font-size: 30px;
+      }
+
+      .div_pedidos {
+          display: flex;
+      }
+      .div_33_pedidos {
+          margin: 40px;
+      }
+      form label {
+          font-size: 22px;
+          margin-left: 20pxx;
+      }
+      .input {
+          margin-left: 20px;
+          font-size: 20px;
+      }
+      .textarea {
+          margin-left: 130px;
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img style="float: left; margin-left: 35px; margin-top: 10px;" src="./img/logo.png" id="logo" alt="logotipo Guayapa pasteleria" width="130px" >
+        <h1>Guayaba Pasteleria </h1>
+        <p>El autentico sabor de la abuela ... </p>
+
+    </header>
+
+    <section>
+         <nav>
+             <ul>
+                 <li><a href="./index.html">Inicio</a></li>
+                 <li><a href="./pedidos.html">Pedido</a></li>
+                 <li><a href="./pastelero.html">Pastelero</a></li>
+             </ul>
+         </nav>
+
+         <article>
+             <h1 style="font-size: 35px; text-align: center;">Pedido</h1>
+
+             <form action="" id="form1" method="post">
+
+                <label for="nombre"> Ingrese su nombre</label>
+                <input type="text" id="nombre" name="nombre" class="input">
+                <label for="apellido"> Ingrese su apellido</label>
+                <input type="text" id="apellido" name="apellido" class="input"><br><br>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" class="input">
+                <label for="telefono">Email</label>
+                <input type="email" name="correo" id="correo" class="input"><br><br>
+
+                <label for="comentarios">Comentarios</label><br>
+                <textarea name="comentarios" id="comentarios" cols="30" rows="5" class="textarea"></textarea>
+
+                <div class="div_pedidos">
+                    <div class="div_33_pedidos">
+                        <h4>seleccione los sabores</h4>
+                        
+                        <input type="radio" id="saborGuayaba" name="saborGuayaba" value="guayaba" class="radio">
+                        <label for="saborGuayaba" class="selecSabores">Guayaba</label>
+                        <br>
+                        <input type="radio" id="saborGuayabaQueso" name="saborGuayabaQueso" value="guayaba con queso" class="radio">
+                        <label for="saborGuayabaQueso" class="selecSabores">Guayaba con queso</label>
+                        <br>
+                        <input type="radio" id="saborGuayabaCajeta" name="saborGuayabaCajeta" value="guayaba con cajeta" class="radio">
+                        <label for="saborGuayabaCajeta" class="selecSabores">Guayaba con cajeta</label>
+                        <br>
+                        <input type="radio" id="saborCoco" name="saborCoco" value="coco" class="radio">
+                        <label for="saborCoco" class="selecSabores">Coco</label>
+                        <br>
+                        <input type="radio" id="saborLimon" name="saborLimon" value="limon" class="radio">
+                        <label for="saborLimon" class="selecSabores">Limón</label>
+                        <br>
+                        <input type="radio" id="saborTresleches" name="saborTresleches" value="tres leches" class="radio">
+                        <label for="saborTresleches" class="selecSabores">Tres leches</label>
+                        <br>
+                        <input type="radio" id="saborMoka" name="saborMoka" value="moka" class="radio">
+                        <label for="saborMoka" class="selecSabores">Moka</label>
+
+                    </div>
+
+                    <div class="div_33_pedidos">
+                        <h4>Seleccione los adornos</h4>
+
+                        <input type="checkbox" id="chocolate" name="chocolate" class="check" value="chocolate" >
+                        <label for="chocolate">Contorno de chocolate</label>
+                        <br>
+                        <input type="checkbox" id="glaseado" name="glaseado" class="check" value="glaseado">
+                        <label for="glaseado">Glaseado</label>
+                        <br>
+                        <input type="checkbox" id="chocolateBlanco" name="ChocolateBlanco" class="check" value="chocolate blanco">
+                        <label for="ChocolateBlanco">Contorno de chocolate blanco</label>
+                        <br>
+                        <input type="checkbox" id="coco" name="coco" class="check"value="coco"  >
+                        <label for="coco">Coco en hojuelas</label>
+                        <br>
+                        <input type="checkbox" id="frutas" name="frutas" class="check" value="frutas">
+                        <label for="frutas">Frutas</label>
+                        <br>
+                        <input type="checkbox" id="chispaColores" name="chispaColores" class="check" value="chispa de colores">
+                        <label for="chispaColores">Chispa de colores</label>
+                        <br>
+
+                    </div>
+
+                    <div class="div_33_pedidos">
+                        <h4>Cantidad de pasteles</h4>
+
+                        <input type="number" name="numPasteles" id="numPasteles" >
+                        <label for="numeroPasteles">Cantidad de pasteles</label>
+                        
+
+                    </div>
+                </div>
+
+             </form>
+
+
+             
+         </article>
+         
+         <div class="container_40">
+        
+    </section>
+
+    <footer>
+        <div class="container_row" >
+            <div class="column_33">
+                <h4>¿Por qué elegirnos?</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Rerum quidem, dolor neque at saepe mollitia consequuntur
+                     eveniet culpa accusantium aut sapiente nihil est voluptatibus vero,
+                      sed earum modi facere aliquid.</p>
+            </div>
+            <div class="column_33">
+                <h4>Contactanos</h4>
+                <p class="column-txt">Avenida Sombrerete, #489, santiago de Quéretaro, querétaro, Mexíco. </p>
+                <p class="column-txt">telefono. 442-786-67-69</p>
+                <p class="column-txt">informacion@guayabaPasteleria.com</p>
+                <p class="column-txt">Horario: 9:00 a.m. - 10:00 p.m.</p>
+            </div>
+            <div class="column_33">
+                <h4>Siguenos en nuestras redes</h4>
+                
+                <a href="" style="margin-left: 8px;"><img src="./img/logofacebook.png" alt="" width="35px"></a>
+                <a href="" style="margin-left: 8px"><img src="./img/logoinstagran.png" alt="" width="35px"></a>
+                <a href="" style="margin-left: 8px"><img src="./img/logopinterest.png" alt="" width="35px"></a>
+                <a href="" style="margin-left: 8px"><img src="./img/logotwitter.png" alt="" width="35px"></a>
+            </div>
+
+        </div>
+    </footer>
+    
+</body>
+</html>
